@@ -36,9 +36,9 @@ body {
     padding: 2rem;
 }
 
-.nav-link {
+/* .nav-link {
     color: var(--text-dim);
-}
+    .footer-contact */
 
 a {
     color: var(--link-new);
@@ -46,7 +46,15 @@ a {
 }
 
 a:hover {
-    color: var(--text);
+    color: #7da178;
+}
+
+a:active {
+    color: #888;
+}
+
+a:visited {
+    color: #7da178;
 }
 
 ul {
