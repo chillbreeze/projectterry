@@ -1,7 +1,64 @@
+:root {
+    --bg: #1d2021;
+    --text: #ddc7a1;
+    --text-dim: #888;
+    --link-new:#7da178;
+
 body {
     font-family: "DM Sans", sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
     padding: 2rem;
+}
+
+.nav-link {
+    color: var(--text-dim);
+}
+
+
+.footer-contact {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+.projects a:hover {
+    color: var(--text);
+}
+
+.projects a {
+    color: var(--link-new);
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+}
+
+.footer-contact {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.footer-contact a {
+    color: var(--text-dim);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: var(--text);
 }
