@@ -5,6 +5,29 @@
     --link-new: #7da178;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+.intro {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+h2 {
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     background: var(--bg);
@@ -28,6 +51,9 @@ a:hover {
 
 ul {
     list-style: none;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 25px;
 }
 
 li {
@@ -35,6 +61,10 @@ li {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+}
+
+li p {
+    margin-top: 0.4rem;
 }
 
 .footer-contact {
