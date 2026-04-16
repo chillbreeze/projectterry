@@ -61,16 +61,16 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:visited {
     color: #7da178;
+}
+
+a:hover {
+    color: #928374;
 }
 
 a:active {
     color: #888;
-}
-
-a:visited {
-    color: #7da178;
 }
 
 ul {
@@ -83,7 +83,10 @@ ul {
 li {
     background-color: #32302f;
     padding: 10px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
@@ -95,17 +98,24 @@ li p {
     margin-top: 0.75rem;
     font-size: 0.75rem;
     color: var(--text-dim);
-}
-
-.footer-contact {
-    margin-top: 0.75rem;
-    font-size: 0.75rem;
-    color: var(--text-dim);
     letter-spacing: 0.05em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.footer-contact a {
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .footer-contact a:hover {
