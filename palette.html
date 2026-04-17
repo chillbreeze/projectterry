@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gruvbox Dark Hard — Site Palette</title>
+        <style>
+            :root {
+                --bg: #1d2021;
+                --bg-1: #282828;
+                --bg-2: #32302f;
+                --bg-3: #3c3836;
+                --text: #ddc7a1;
+                --text-dim: #928374;
+                --text-muted: #665c54;
+                --link: #458588;
+                --link-hover: #83a598;
+                --link-visited: #d3869b;
+                --yellow: #d8a657;
+                --orange: #e78a4e;
+                --red: #ea6962;
+                --green: #a9b665;
+                --aqua: #89b482;
+                --blue: #7daea3;
+                --purple: #d3869b;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: "DM Sans", "Segoe UI", sans-serif;
+                padding: 3rem 2rem;
+                min-height: 100vh;
+            }
+
+            header {
+                margin-bottom: 3rem;
+                border-bottom: 1px solid var(--bg-3);
+                padding-bottom: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: var(--text);
+                letter-spacing: 0.02em;
+            }
+
+            header p {
+                font-size: 0.8rem;
+                color: var(--text-dim);
+                margin-top: 0.4rem;
+                font-family: monospace;
+            }
+
+            .section {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-label {
+                font-size: 0.7rem;
+                color: var(--text-muted);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                margin-bottom: 0.75rem;
+            }
+
+            .swatches {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 8px;
+            }
+
+            .swatch {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: var(--bg-2);
+                border: 1px solid var(--bg-3);
+                border-radius: 6px;
+                padding: 10px 14px;
+            }
+
+            .dot {
+                width: 36px;
+                height: 36px;
+                border-radius: 5px;
+                flex-shrink: 0;
+                border: 1px solid rgba(255, 255, 255, 0.07);
+            }
+
+            .swatch-info {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .swatch-name {
+                font-family: monospace;
+                font-size: 0.8rem;
+                color: var(--text);
+            }
+
+            .swatch-hex {
+                font-family: monospace;
+                font-size: 0.72rem;
+                color: var(--text-dim);
+            }
+
+            .swatch-role {
+                font-size: 0.7rem;
+                color: var(--text-muted);
+            }
+
+            .code-block {
+                background: var(--bg-2);
+                border: 1px solid var(--bg-3);
+                border-radius: 6px;
+                padding: 1.25rem 1.5rem;
+                font-family: monospace;
+                font-size: 0.8rem;
+                color: var(--text-dim);
+                line-height: 1.8;
+                white-space: pre;
+                overflow-x: auto;
+            }
+
+            .code-block .var-name {
+                color: var(--aqua);
+            }
+            .code-block .var-value {
+                color: var(--yellow);
+            }
+            .code-block .comment {
+                color: var(--text-muted);
+            }
+            .code-block .bracket {
+                color: var(--text-dim);
+            }
+
+            .divider {
+                height: 1px;
+                background: var(--bg-3);
+                margin: 2rem 0;
+            }
+
+            .link-preview {
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+                background: var(--bg-2);
+                border: 1px solid var(--bg-3);
+                border-radius: 6px;
+                padding: 1rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .link-preview span {
+                font-size: 0.7rem;
+                color: var(--text-muted);
+                display: block;
+                margin-bottom: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Gruvbox Dark Hard — Site Palette</h1>
+            <p>projectterry.net · gruvbox-palette.html</p>
+        </header>
+
+        <div class="section">
+            <div class="section-label">Backgrounds</div>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="dot" style="background: #1d2021"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--bg</span
+                        ><span class="swatch-hex">#1d2021</span
+                        ><span class="swatch-role">page background</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #282828"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--bg-1</span
+                        ><span class="swatch-hex">#282828</span
+                        ><span class="swatch-role">subtle surface</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #32302f"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--bg-2</span
+                        ><span class="swatch-hex">#32302f</span
+                        ><span class="swatch-role">card / list item</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #3c3836"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--bg-3</span
+                        ><span class="swatch-hex">#3c3836</span
+                        ><span class="swatch-role">borders, separators</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Text</div>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="dot" style="background: #ddc7a1"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--text</span
+                        ><span class="swatch-hex">#ddc7a1</span
+                        ><span class="swatch-role">primary foreground</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #928374"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--text-dim</span
+                        ><span class="swatch-hex">#928374</span
+                        ><span class="swatch-role">secondary / footer</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #665c54"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--text-muted</span
+                        ><span class="swatch-hex">#665c54</span
+                        ><span class="swatch-role">comments, very subtle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Links</div>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="dot" style="background: #458588"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--link</span
+                        ><span class="swatch-hex">#458588</span
+                        ><span class="swatch-role">a:link — unvisited</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #83a598"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--link-hover</span
+                        ><span class="swatch-hex">#83a598</span
+                        ><span class="swatch-role">a:hover</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #d3869b"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--link-visited</span
+                        ><span class="swatch-hex">#d3869b</span
+                        ><span class="swatch-role">a:visited</span>
+                    </div>
+                </div>
+            </div>
+            <div class="link-preview" style="margin-top: 8px">
+                <div>
+                    <span>unvisited</span
+                    ><a
+                        href="#"
+                        style="
+                            color: #458588;
+                            text-decoration: none;
+                            font-size: 0.9rem;
+                        "
+                        >example link</a
+                    >
+                </div>
+                <div>
+                    <span>hover</span
+                    ><a
+                        href="#"
+                        style="
+                            color: #83a598;
+                            text-decoration: none;
+                            font-size: 0.9rem;
+                        "
+                        >example link</a
+                    >
+                </div>
+                <div>
+                    <span>visited</span
+                    ><a
+                        href="#"
+                        style="
+                            color: #d3869b;
+                            text-decoration: none;
+                            font-size: 0.9rem;
+                        "
+                        >example link</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-label">Accents</div>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="dot" style="background: #d8a657"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--yellow</span
+                        ><span class="swatch-hex">#d8a657</span
+                        ><span class="swatch-role">warm highlight</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #e78a4e"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--orange</span
+                        ><span class="swatch-hex">#e78a4e</span
+                        ><span class="swatch-role">warm accent</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #ea6962"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--red</span
+                        ><span class="swatch-hex">#ea6962</span
+                        ><span class="swatch-role">error / warning</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #a9b665"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--green</span
+                        ><span class="swatch-hex">#a9b665</span
+                        ><span class="swatch-role">success / nature</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #89b482"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--aqua</span
+                        ><span class="swatch-hex">#89b482</span
+                        ><span class="swatch-role">soft green accent</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #7daea3"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--blue</span
+                        ><span class="swatch-hex">#7daea3</span
+                        ><span class="swatch-role">blue accent</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="dot" style="background: #d3869b"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">--purple</span
+                        ><span class="swatch-hex">#d3869b</span
+                        ><span class="swatch-role">purple accent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">CSS :root block</div>
+            <div class="code-block">
+                <span class="bracket">:root {</span>
+                <span class="comment">/* Backgrounds */</span>
+                <span class="var-name">--bg</span>:
+                <span class="var-value">#1d2021</span>;
+                <span class="comment">/* page background */</span>
+                <span class="var-name">--bg-1</span>:
+                <span class="var-value">#282828</span>;
+                <span class="comment">/* subtle surface */</span>
+                <span class="var-name">--bg-2</span>:
+                <span class="var-value">#32302f</span>;
+                <span class="comment">/* card / list item */</span>
+                <span class="var-name">--bg-3</span>:
+                <span class="var-value">#3c3836</span>;
+                <span class="comment">/* borders, separators */</span>
+
+                <span class="comment">/* Text */</span>
+                <span class="var-name">--text</span>:
+                <span class="var-value">#ddc7a1</span>;
+                <span class="comment">/* primary foreground */</span>
+                <span class="var-name">--text-dim</span>:
+                <span class="var-value">#928374</span>;
+                <span class="comment">/* secondary / footer */</span>
+                <span class="var-name">--text-muted</span>:
+                <span class="var-value">#665c54</span>;
+                <span class="comment">/* comments, very subtle */</span>
+
+                <span class="comment">/* Links */</span>
+                <span class="var-name">--link</span>:
+                <span class="var-value">#458588</span>;
+                <span class="comment">/* a:link */</span>
+                <span class="var-name">--link-hover</span>:
+                <span class="var-value">#83a598</span>;
+                <span class="comment">/* a:hover */</span>
+                <span class="var-name">--link-visited</span>:
+                <span class="var-value">#d3869b</span>;
+                <span class="comment">/* a:visited */</span>
+
+                <span class="comment">/* Accents */</span>
+                <span class="var-name">--yellow</span>:
+                <span class="var-value">#d8a657</span>;
+                <span class="var-name">--orange</span>:
+                <span class="var-value">#e78a4e</span>;
+                <span class="var-name">--red</span>:
+                <span class="var-value">#ea6962</span>;
+                <span class="var-name">--green</span>:
+                <span class="var-value">#a9b665</span>;
+                <span class="var-name">--aqua</span>:
+                <span class="var-value">#89b482</span>;
+                <span class="var-name">--blue</span>:
+                <span class="var-value">#7daea3</span>;
+                <span class="var-name">--purple</span>:
+                <span class="var-value">#d3869b</span>;
+                <span class="bracket">}</span>
+            </div>
+        </div>
+    </body>
+</html>
