@@ -34,7 +34,7 @@
 main {
     width: 1200px;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: auto;
     margin-right: auto;
     margin-left: auto;
 }
@@ -108,7 +108,7 @@ li {
     margin-top: 10px;
     margin-right: 30px;
     margin-left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: auto;
     border-radius: 5px;
 }
 
