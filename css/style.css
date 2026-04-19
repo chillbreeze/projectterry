@@ -27,7 +27,6 @@
 
 @media (max-width: 768px) {
     .about {
-        max-width: 100%;
         font-size: 16px;
         padding: 0 20px;
     }
@@ -40,9 +39,11 @@
 }
 
 main {
-    max-width: 1200px;
+    width: 1200px;
     padding: 20px;
-    margin: 0 auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h1 {
