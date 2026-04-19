@@ -11,7 +11,7 @@
     --text-muted: #665c54;
 
     /* Links */
-    --link: #458588;
+    --link: #83a598;
     --link-hover: #83a598;
     --link-visited: #d3869b;
 
@@ -83,7 +83,7 @@ a {
 }
 
 a:link {
-    color: #458588;
+    color: #83a598;
 }
 
 a:visited {
@@ -91,7 +91,7 @@ a:visited {
 }
 
 a:hover {
-    color: #83a598;
+    color: #89b482;
 }
 
 a:active {
@@ -127,7 +127,7 @@ li p {
 .footer-contact {
     margin-top: 0.75rem;
     font-size: 0.75rem;
-    color: var(--text-dim);
+    color: #a89984;
     letter-spacing: 0.05em;
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ li p {
 }
 
 .footer-contact a {
-    color: var(--text-dim);
+    color: #a89984;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
