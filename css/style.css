@@ -75,7 +75,7 @@ body {
 }
 
 .title {
-    color: #89b482;
+    color: var(--aqua);
     padding-bottom: 10px;
 }
 
@@ -102,7 +102,7 @@ ul {
 }
 
 li {
-    background-color: #32302f;
+    background-color: var(--bg-2);
     padding: 15px;
     margin-top: 10px;
     margin-right: 30px;
