@@ -103,9 +103,13 @@ a {
     flex-direction: column;
     gap: 0.5rem;
     position: relative;
+    transition:
+        transform 0.2s ease,
+        border-left-color 0.2s ease;
 }
 
 .card:hover {
+    transform: translateY(-3px);
     border-left-color: var(--green);
 }
 
