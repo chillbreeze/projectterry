@@ -84,37 +84,40 @@ a {
     text-decoration: none;
 }
 
-li a {
-    display: block;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-li a::after {
+.card {
+    background-color: var(--bg-2);
+    padding: 20px 20px 20px 18px;
+    border-radius: 5px;
+    border-left: 5px solid var(--aqua);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.card a {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.card a::after {
     content: "";
     position: absolute;
     inset: 0;
 }
 
-ul {
-    list-style: none;
-    padding-top: 5px;
-    padding-left: 0px;
-    padding-bottom: 25px;
-}
-
-li {
-    background-color: var(--bg-2);
-    padding: 15px;
-    margin-top: 10px;
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-bottom: auto;
-    border-radius: 5px;
-    border-left: 5px solid var(--aqua);
-    position: relative;
-}
-
-li p {
-    margin-top: 0.4rem;
+.card p {
+    font-size: 0.875rem;
+    color: var(--text-dim);
+    line-height: 1.5;
 }
 
 a:link {
@@ -166,11 +169,7 @@ a:active {
         padding-top: 0;
         padding-left: 0;
     }
-    ul {
-        padding-left: 0;
-    }
-    li {
-        margin-left: 0;
-        margin-right: 0;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
