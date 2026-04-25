@@ -207,4 +207,8 @@ a:active {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
