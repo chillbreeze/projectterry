@@ -47,7 +47,7 @@ h1 {
     padding-bottom: 25px;
     text-align: center;
     line-height: 1.6;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     font-size: 16px;
 }
 
@@ -62,7 +62,7 @@ h1 {
 
 h2 {
     padding-top: 25px;
-    padding-left: 15px;
+    padding-left: 30px;
     text-align: left;
 }
 
@@ -131,7 +131,7 @@ a:active {
 }
 
 .footer-contact {
-    margin-top: 0.75rem;
+    margin-top: 3rem;
     font-size: 0.75rem;
     color: #a89984;
     letter-spacing: 0.05em;
