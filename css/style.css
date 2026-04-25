@@ -62,13 +62,16 @@ h1 {
 
 h2 {
     padding-top: 25px;
-    padding-left: 30px;
+
     text-align: left;
 }
 
 body {
     font-family: "DM Sans", sans-serif;
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image: radial-gradient(circle, #3c3836 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
     color: var(--text);
     min-height: 100vh;
     padding: 2rem;
@@ -96,11 +99,14 @@ a {
     padding: 20px 20px 20px 18px;
     border-radius: 5px;
     border-left: 5px solid var(--aqua);
-
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     position: relative;
+}
+
+.card:hover {
+    border-left-color: var(--green);
 }
 
 .card a {
@@ -120,11 +126,36 @@ a {
     line-height: 1.5;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.skill-group h3 {
+    font-size: 0.85rem;
+    color: var(--yellow);
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.skill-group ul {
+    padding-left: 1rem;
+    padding-bottom: 0;
+}
+
+.skill-group {
+    background: none;
+    padding: 8px 0 0 0;
+    border-top: 3px solid var(--yellow);
+}
+
 a:link {
     color: var(--aqua);
 }
 a:visited {
-    color: var(--purple);
+    color: var(--aqua);
 }
 a:hover {
     color: var(--link-hover);
