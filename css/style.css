@@ -110,7 +110,7 @@ a {
 
 .card:hover {
     transform: translateY(-3px);
-    border-left-color: var(--green);
+    border-left-color: var(--link-hover);
 }
 
 .card a {
