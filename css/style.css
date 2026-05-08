@@ -168,6 +168,41 @@ a:active {
     color: var(--red);
 }
 
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--bg-2);
+    border: 1px solid var(--green);
+    border-radius: 999px;
+    width: fit-content;
+    font-size: 0.875rem;
+    color: var(--green);
+}
+
+.cta a {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cta-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--green);
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
 .footer-contact {
     margin-top: 3rem;
     font-size: 0.75rem;
