@@ -25,6 +25,10 @@
     --purple: #d3869b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
