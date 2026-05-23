@@ -21,174 +21,149 @@
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     </head>
     <body>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="5"/>
-                <line x1="12" y1="1" x2="12" y2="3"/>
-                <line x1="12" y1="21" x2="12" y2="23"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                <line x1="1" y1="12" x2="3" y2="12"/>
-                <line x1="21" y1="12" x2="23" y2="12"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-        </button>
+        <nav class="site-nav">
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+        </nav>
+
         <main>
-            <h1>Hey, I'm Terry!</h1>
-            <div class="intro">
-                <p>Self-hosting. Linux. Docker. Networking.</p>
-            </div>
+            <section class="hero">
+                <h1>Hey, I'm Terry.</h1>
+                <p class="location">Siem Reap, Cambodia</p>
+                <div class="about">
+                    <p>
+                        I'm 46, and I build things when they don't exist yet.
+                        Mostly infrastructure, small hardware, and tools for keeping
+                        track of the environment around me. I'm not following a tech
+                        roadmap — just solving whatever's in front of me, from a
+                        city most developers aren't in.
+                    </p>
+                </div>
+                <div class="cta">
+                    <span class="cta-dot"></span>
+                    Available for remote work &mdash;
+                    <a href="mailto:projectterry@proton.me">get in touch</a>
+                </div>
+            </section>
 
-            <div class="about">
+            <section id="projects" class="projects-section">
+                <h2>Projects</h2>
+                <p class="section-note">Things I built because they didn't exist yet.</p>
+
+                <div class="card card--featured">
+                    <div class="card-left">
+                        <a
+                            href="https://github.com/chillbreeze/air.siemreap.cloud"
+                            target="_blank"
+                        >Air Quality Website</a>
+                        <div class="tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">ESPHome</span>
+                            <span class="tag">Home Assistant</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <p>
+                            There wasn't much air quality data for Siem Reap,
+                            Cambodia available, so I built my own website. An ESP32
+                            + SEN55 sensor feeds readings through ESPHome and Home
+                            Assistant to a self-hosted Flask dashboard with 24-hour
+                            history.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="card">
+                        <a
+                            href="https://github.com/chillbreeze/env3-cardputer-adv"
+                            target="_blank"
+                        >Environmental Monitor</a>
+                        <p>
+                            Needed a compact, always-on room monitor without cloud
+                            dependency. Built on an M5Stack Cardputer with live AQI,
+                            PM 1.0, PM 2.5, temperature, humidity, and pressure
+                            readouts and 1-hour history charts — all self-contained.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">M5Stack Cardputer</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a
+                            href="https://github.com/chillbreeze/khmer-quiz"
+                            target="_blank"
+                        >Khmer Quiz</a>
+                        <p>
+                            Existing Khmer learning apps didn't fit how I wanted to
+                            study, so I built my own. A 20-question vocabulary quiz
+                            supporting phonetics, English, or mixed modes for daily
+                            practice while living in Cambodia.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <h2>Work</h2>
                 <p>
-                    Building and running self-hosted infrastructure from Siem
-                    Reap, Cambodia. Linux, Docker, networking — practical
-                    projects, not tutorial clones.
+                    Open to remote work. I'm better suited to practical,
+                    self-directed projects than a conventional job description —
+                    if you need someone who figures things out from scratch rather
+                    than follows a playbook, <a href="mailto:projectterry@proton.me">get in touch</a>.
                 </p>
-            </div>
-
-            <div class="cta">
-                <span class="cta-dot"></span>
-                Available for remote work &mdash;
-                <a href="mailto:projectterry@proton.me">get in touch</a>
-            </div>
-
-            <h2 id="projects">Projects</h2>
-            <div class="projects-grid">
-                <div class="card">
-                    <a
-                        href="https://github.com/chillbreeze/env3-cardputer-adv"
-                        class="project-title"
-                        target="_blank"
-                        >Environmental Monitor</a
-                    >
-                    <p>
-                        Needed a compact, always-on room monitor without cloud
-                        dependency. Built on an M5Stack Cardputer with live AQI,
-                        PM 1.0, PM 2.5, temperature, humidity, and pressure
-                        readouts and 1-hour history charts — all self-contained.
-                    </p>
-                </div>
-                <div class="card">
-                    <a
-                        href="https://github.com/chillbreeze/air.siemreap.cloud"
-                        class="project-title"
-                        target="_blank"
-                        >Air Quality Website</a
-                    >
-                    <p>
-                        There wasn't much air quality data for Siem Reap,
-                        Cambodia available, so I built my own website. An ESP32
-                        + SEN55 sensor feeds readings through ESPHome and Home
-                        Assistant to a self-hosted Flask dashboard with 24-hour
-                        history.
-                    </p>
-                </div>
-                <div class="card">
-                    <a
-                        href="https://github.com/chillbreeze/khmer-quiz"
-                        class="project-title"
-                        target="_blank"
-                        >Khmer Quiz Website</a
-                    >
-                    <p>
-                        Existing Khmer learning apps didn't fit how I wanted to
-                        study, so I built my own. A 20-question vocabulary quiz
-                        supporting phonetics, English, or mixed modes for daily
-                        practice while living in Cambodia.
-                    </p>
-                </div>
-            </div>
-            <h2 id="skills">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3>Infrastructure</h3>
-                    <ul>
-                        <li>Linux</li>
-                        <li>Docker</li>
-                        <li>Networking</li>
-                        <li>Tailscale</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Monitoring</h3>
-                    <ul>
-                        <li>ESPHome</li>
-                        <li>InfluxDB</li>
-                        <li>Grafana</li>
-                        <li>Home Assistant</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Web & Tools</h3>
-                    <ul>
-                        <li>Flask</li>
-                        <li>HTML & CSS</li>
-                        <li>Git</li>
-                        <li>Shell scripting</li>
-                    </ul>
-                </div>
-            </div>
+            </section>
         </main>
 
         <footer>
-            <div class="footer-contact">
-                <h3>Connect with me</h3>
-                <div class="footer-links">
-                    <a href="https://github.com/chillbreeze" target="_blank">
-                        <svg
-                            width="14"
-                            height="14"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
-                            />
-                        </svg>
-                        GitHub
-                    </a>
-                    <span>|</span>
-                    <a href="mailto:projectterry@proton.me">
-                        <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-                            />
-                        </svg>
-                        Email
-                    </a>
-                    <span>|</span>
-                    <a href="https://t.me/ProjectTerry" target="_blank">
-                        <svg
-                            width="14"
-                            height="14"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.347l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.212z"
-                            />
-                        </svg>
-                        Telegram
-                    </a>
-                </div>
+            <div class="footer-links">
+                <a href="https://github.com/chillbreeze" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <span>|</span>
+                <a href="mailto:projectterry@proton.me">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    Email
+                </a>
+                <span>|</span>
+                <a href="https://t.me/ProjectTerry" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.347l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.212z"/>
+                    </svg>
+                    Telegram
+                </a>
             </div>
         </footer>
+
         <script>
             var btn = document.getElementById('themeToggle');
             btn.addEventListener('click', function () {
