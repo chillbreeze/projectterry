@@ -14,6 +14,22 @@
     --border: #ddd5c8;
 }
 
+[data-theme="dark"] {
+    --bg: #272422;
+    --bg-1: #2d2a27;
+    --bg-2: #333028;
+
+    --text: #e6ddd0;
+    --text-dim: #b0a395;
+    --text-muted: #786b60;
+
+    --green: #6aaa78;
+    --green-dark: #50875e;
+
+    --earth: #c4906a;
+    --border: #413c36;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -191,6 +207,36 @@ a:active  { color: var(--earth); }
     0%, 100% { opacity: 1; }
     50%       { opacity: 0.3; }
 }
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.theme-toggle:hover {
+    color: var(--text);
+}
+
+/* Light mode: show moon (click to go dark) */
+.icon-sun  { display: none; }
+.icon-moon { display: block; }
+
+/* Dark mode: show sun (click to go light) */
+[data-theme="dark"] .icon-sun  { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
 
 .footer-contact {
     margin-top: 3rem;
