@@ -1,28 +1,17 @@
 :root {
-    /* Backgrounds */
-    --bg: #1d2021;
-    --bg-1: #282828;
-    --bg-2: #32302f;
-    --bg-3: #3c3836;
+    --bg: #f5f1eb;
+    --bg-1: #faf8f5;
+    --bg-2: #ffffff;
 
-    /* Text */
-    --text: #ddc7a1;
-    --text-dim: #928374;
-    --text-muted: #665c54;
+    --text: #2d2926;
+    --text-dim: #6b6055;
+    --text-muted: #a89880;
 
-    /* Links */
-    --link: #83a598;
-    --link-hover: #83a598;
-    --link-visited: #d3869b;
+    --green: #4d7a57;
+    --green-dark: #345240;
 
-    /* Accents */
-    --yellow: #d8a657;
-    --orange: #e78a4e;
-    --red: #ea6962;
-    --green: #a9b665;
-    --aqua: #89b482;
-    --blue: #7daea3;
-    --purple: #d3869b;
+    --earth: #8b7355;
+    --border: #ddd5c8;
 }
 
 html {
@@ -44,6 +33,14 @@ main, footer {
     animation: fadein 0.6s ease-out both;
 }
 
+body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
 main {
     max-width: 1000px;
     width: 100%;
@@ -55,6 +52,14 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+}
+
 .intro {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -62,6 +67,7 @@ h1 {
     line-height: 1.6;
     letter-spacing: 0.5px;
     font-size: 16px;
+    color: var(--text-dim);
 }
 
 .about {
@@ -73,32 +79,15 @@ h1 {
     margin: 0 auto;
 }
 
-h2 {
-    padding-top: 25px;
-
-    text-align: left;
-}
-
-body {
-    font-family: "DM Sans", sans-serif;
-    background-color: var(--bg);
-    background-image: radial-gradient(circle, #3c3836 1px, transparent 1px);
-    background-size: 24px 24px;
-    background-attachment: fixed;
-    color: var(--text);
-    min-height: 100vh;
-    padding: 2rem;
-}
-
-.title {
-    color: var(--aqua);
-    padding-bottom: 10px;
-}
-
 a {
-    color: var(--link);
+    color: var(--green);
     text-decoration: none;
 }
+
+a:link    { color: var(--green); }
+a:visited { color: var(--green); }
+a:hover   { color: var(--green-dark); }
+a:active  { color: var(--earth); }
 
 .projects-grid {
     display: grid;
@@ -109,21 +98,21 @@ a {
 
 .card {
     background-color: var(--bg-2);
-    padding: 20px 20px 20px 18px;
-    border-radius: 5px;
-    border-left: 5px solid var(--aqua);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--green);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     position: relative;
-    transition:
-        transform 0.2s ease,
-        border-left-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-3px);
-    border-left-color: var(--link-hover);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .card a {
@@ -150,35 +139,22 @@ a {
     padding: 1rem 0;
 }
 
+.skill-group {
+    background: none;
+    padding: 8px 0 0 0;
+    border-top: 2px solid var(--green);
+}
+
 .skill-group h3 {
     font-size: 0.85rem;
-    color: var(--yellow);
+    color: var(--green);
     padding-bottom: 6px;
     margin-bottom: 8px;
 }
 
 .skill-group ul {
     padding-left: 1rem;
-    padding-bottom: 0;
-}
-
-.skill-group {
-    background: none;
-    padding: 8px 0 0 0;
-    border-top: 3px solid var(--yellow);
-}
-
-a:link {
-    color: var(--aqua);
-}
-a:visited {
-    color: var(--aqua);
-}
-a:hover {
-    color: var(--link-hover);
-}
-a:active {
-    color: var(--red);
+    color: var(--text-dim);
 }
 
 .cta {
@@ -188,7 +164,7 @@ a:active {
     gap: 0.5rem;
     margin: 1.5rem auto 0;
     padding: 0.5rem 1.25rem;
-    background-color: var(--bg-2);
+    background-color: var(--bg-1);
     border: 1px solid var(--green);
     border-radius: 999px;
     width: fit-content;
@@ -213,18 +189,27 @@ a:active {
 
 @keyframes pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    50%       { opacity: 0.3; }
 }
 
 .footer-contact {
     margin-top: 3rem;
+    padding-bottom: 2rem;
     font-size: 0.75rem;
-    color: #a89984;
+    color: var(--text-muted);
     letter-spacing: 0.05em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+}
+
+.footer-contact h3 {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .footer-links {
@@ -234,7 +219,7 @@ a:active {
 }
 
 .footer-contact a {
-    color: #a89984;
+    color: var(--text-muted);
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -249,7 +234,7 @@ a:active {
         padding: 1rem;
     }
     h2 {
-        padding-top: 20;
+        padding-top: 20px;
         padding-left: 0;
     }
     .projects-grid {
