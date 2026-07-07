@@ -1,3 +1,3 @@
 # projectterry
-Personal portfolio site — [projectterry.net](https://projectterry.net)
+Landing page for [projectterry.net](https://projectterry.net), pointing to my other sites (air quality dashboard, ebook library).
 Stack: HTML, CSS

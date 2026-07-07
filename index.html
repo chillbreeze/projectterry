@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <title>Project Terry</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="description" content="Terry's personal website" />
+        <meta name="description" content="Terry's personal site — links to his projects" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://projectterry.net" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,10 +22,6 @@
     </head>
     <body>
         <nav class="site-nav">
-            <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                 <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -48,94 +44,20 @@
             <section class="hero">
                 <h1>Hey, I'm Terry.</h1>
                 <p class="location">Siem Reap, Cambodia</p>
-                <div class="about">
-                    <p>
-                        I'm 46, and I build things when they don't exist yet.
-                        Mostly infrastructure, small hardware, and tools for keeping
-                        track of the environment around me. I'm not following a tech
-                        roadmap — just solving whatever's in front of me, from a
-                        city most developers aren't in.
-                    </p>
-                </div>
-                <div class="cta">
-                    <span class="cta-dot"></span>
-                    Available for remote work &mdash;
-                    <a href="mailto:projectterry@proton.me">get in touch</a>
-                </div>
+                <p class="lede">Two things I've built and actually keep running:</p>
             </section>
 
-            <section id="projects" class="projects-section">
-                <h2>Projects</h2>
-                <p class="section-note">Things I built because they didn't exist yet.</p>
-
-                <div class="card card--featured">
-                    <div class="card-left">
-                        <a
-                            href="https://github.com/chillbreeze/air.siemreap.cloud"
-                            target="_blank"
-                        >Air Quality Website</a>
-                        <div class="tags">
-                            <span class="tag">ESP32</span>
-                            <span class="tag">ESPHome</span>
-                            <span class="tag">Home Assistant</span>
-                            <span class="tag">Flask</span>
-                        </div>
-                    </div>
-                    <div class="card-right">
-                        <p>
-                            There wasn't much air quality data for Siem Reap,
-                            Cambodia available, so I built my own website. An ESP32
-                            + SEN55 sensor feeds readings through ESPHome and Home
-                            Assistant to a self-hosted Flask dashboard with 24-hour
-                            history.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="projects-grid">
-                    <div class="card">
-                        <a
-                            href="https://github.com/chillbreeze/env3-cardputer-adv"
-                            target="_blank"
-                        >Environmental Monitor</a>
-                        <p>
-                            Needed a compact, always-on room monitor without cloud
-                            dependency. Built on an M5Stack Cardputer with live AQI,
-                            PM 1.0, PM 2.5, temperature, humidity, and pressure
-                            readouts and 1-hour history charts — all self-contained.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">M5Stack Cardputer</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <a
-                            href="https://github.com/chillbreeze/khmer-quiz"
-                            target="_blank"
-                        >Khmer Quiz</a>
-                        <p>
-                            Existing Khmer learning apps didn't fit how I wanted to
-                            study, so I built my own. A 20-question vocabulary quiz
-                            supporting phonetics, English, or mixed modes for daily
-                            practice while living in Cambodia.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="contact-section">
-                <h2>Work</h2>
-                <p>
-                    Open to remote work. I'm better suited to practical,
-                    self-directed projects than a conventional job description —
-                    if you need someone who figures things out from scratch rather
-                    than follows a playbook, <a href="mailto:projectterry@proton.me">get in touch</a>.
-                </p>
+            <section class="links-section">
+                <a class="link-card" href="https://air.siemreap.cloud">
+                    <span class="link-card-title">Air Quality &rarr;</span>
+                    <p>Live air quality and climate monitoring for Siem Reap, Cambodia.</p>
+                    <span class="link-card-url">air.siemreap.cloud</span>
+                </a>
+                <a class="link-card" href="https://books.projectterry.net">
+                    <span class="link-card-title">Books &rarr;</span>
+                    <p>A self-hosted ebook library — browse, search, and read from any device.</p>
+                    <span class="link-card-url">books.projectterry.net</span>
+                </a>
             </section>
         </main>
 
